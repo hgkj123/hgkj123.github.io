@@ -239,5 +239,12 @@ function search() {
 
 //夜间模式切换
 function switchNightMode() {
-    
+    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+    if (night == '0') {
+        document.body.classList.remove('night');
+        document.cookie = "night=0;path=/"
+        console.log(' ');
+    } else {
+        
+    }
 }
